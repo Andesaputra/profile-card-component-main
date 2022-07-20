@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --pri-darkcyan: hsl(185, 75%, 39%);
+    --pri-verydarkdesaturatedblue: hsl(229, 23%, 23%);
+    --pri-darkgrayishblue: hsl(227, 10%, 46%);
+    --ne-darkgray: hsl(0, 0%, 59%);
+}
+
+/* universal */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pri-darkcyan);
+
+    
+    background-image: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left -15rem bottom 15rem, top 15rem right -15rem;
+}
+
+/* typography */
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+}
+
+.ty-700 {
+    color: var(--pri-verydarkdesaturatedblue);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.ty-400 {
+    color: var(--pri-darkgrayishblue);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#age {
+    font-size: 18px;
+}
+
+#location {
+    font-size: 16px;
+}
+
+/* content */
+.container {
+    background-image: url('images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: .1rem .1rem 1rem rgba(0,0,0,0.3);
+    width: 350px;
+    height: 100%;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 80px;
+}
+
+.avatar>img {
+    border-radius: 50%;
+    border: .4rem solid #fff;
+    position: relative;
+}
+
+.bio {
+    padding: 1.5rem;
+}
+
+.bio>.name {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: .5rem;
+}
+
+.details {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid hsla(0, 0%, 59%,0.3);
+}
+
+/* footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* media query */
+@media (max-width:1000px) {
+    body {
+    background-position: left -25rem bottom 50rem, top 50rem right -25rem;
+    }
+}
+
+@media (max-width:550px) {
+    body {
+        background-position: left -50rem bottom 10rem, top 10rem right -50rem;
+    }
+}
